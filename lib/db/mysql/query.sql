@@ -1,0 +1,9 @@
+
+/** init database sql query*/
+
+
+CREATE TABLE IF NOT EXISTS user (uid INTEGER PRIMARY KEY auto_increment,nickname VARCHAR (18) NOT NULL UNIQUE,passwd_hash VARCHAR (50) NOT NULL, createtime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,passwd_changed TIMESTAMP DEFAULT CURRENT_TIMESTAMP,last_login_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP,device_id VARCHAR (50),email VARCHAR (50),phone_num VARCHAR (11),device_type VARCHAR (20),last_login_ip VARCHAR (15),user_icon VARCHAR (100)) auto_increment=100000;
+
+CREATE TABLE IF NOT EXISTS video (vid INTEGER PRIMARY KEY,picUrl VARCHAR (200),content VARCHAR (200),createtime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,frommQQ VARCHAR (20),seriesId VARCHAR (30));
+
+
