@@ -4,7 +4,9 @@
   "description": "express+node build api site",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "start": "DEBUG=api* NODE_ENV=production node index.js",
+    "debug": "DEBUG=* ./node_modules/.bin/nodemon index.js",
+    "dev": "DEBUG=api* ./node_modules/.bin/nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "connect-redis": "^3.3.2",
+    "debug": "^3.1.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "moment": "^2.19.2",
@@ -31,5 +34,8 @@
     "mysql": "^2.15.0",
     "redis": "^2.8.0",
     "svg-captcha": "^1.3.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   }
 }
